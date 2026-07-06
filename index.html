@@ -99,7 +99,10 @@
   }
   .hero-stat .num { font-size: 1.5rem; font-weight: 700; }
   .hero-stat .lbl { font-size: 0.72rem; color: var(--text2); margin-top: 2px; }
+  .hero-stat .num { color: var(--text); }
   .hero-stat.total .num { color: var(--accent); }
+  .hero-stat.themes .num { color: var(--green); }
+  .hero-stat.sources .num { color: var(--purple); }
   .hero-stat.s1 .num { color: var(--green); }
   .hero-stat.s2 .num { color: var(--orange); }
   .hero-stat.s3 .num { color: var(--pink); }
@@ -229,6 +232,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  .card .card-title { color: var(--text); }
   .card .card-title a { color: var(--text); }
   .card .card-title a:hover { color: var(--accent); text-decoration: none; }
   .card .card-meta {
@@ -295,6 +299,9 @@
 
   /* ===== RESEARCH CARD: full-width when alone in grid ===== */
   .card-research { grid-column: 1 / -1; }
+
+  /* ===== HERO STATS: 统一显式色（防继承链断） ===== */
+  .hero-stat .num { color: var(--text); }
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 640px) {

@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 日报 · 2026年7月6日 · 第42期</title>
+<title>AI 晨报 · 2026年7月5日 · 第67期</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -311,8 +311,8 @@
 
 <!-- ===== HERO ===== -->
 <header class="hero">
-  <div class="hero-badge">📡 第 42 期</div>
-  <h1>AI 日报</h1>
+  <div class="hero-badge">📡 第 67 期</div>
+  <h1>AI 晨报</h1>
   <p class="subtitle">2026 年 7 月 5 日 · 星期日 · 北京时间</p>
   <div class="hero-stats">
     <div class="hero-stat total"><div class="num" id="totalNum">22</div><div class="lbl">总条目</div></div>
@@ -650,7 +650,7 @@
     <span>·</span>
     <span>💡 技巧与观点 <strong>4</strong> 条</span>
   </div>
-  <p style="margin-bottom:0.3rem">共 <strong>22</strong> 条 · 第 42 期 · 2026 年 7 月 5 日 · 星期日</p>
+  <p style="margin-bottom:0.3rem">共 <strong>22</strong> 条 · 第 67 期 · 2026 年 7 月 5 日 · 星期日</p>
   <div class="sources">
     数据来源：The Information · 彭博社 · 人民网 · 央广网 · 36氪 · 每日经济新闻 · 钛媒体 · 科创板日报 · 新华社 · 感应塔 · Kore.ai · GitHUB · CSDN · xAI · Anthropic · GCC-Open AI Infra · 电子工程世界 · 企鹅号 · 站长之家
   </div>

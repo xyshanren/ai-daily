@@ -229,7 +229,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  .card .card-title a { color: inherit; }
+  .card .card-title a { color: var(--text); }
   .card .card-title a:hover { color: var(--accent); text-decoration: none; }
   .card .card-meta {
     display: flex;
@@ -292,6 +292,9 @@
     opacity: 0.7;
     font-size: 0.72rem;
   }
+
+  /* ===== RESEARCH CARD: full-width when alone in grid ===== */
+  .card-research { grid-column: 1 / -1; }
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 640px) {

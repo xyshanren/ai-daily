@@ -305,7 +305,34 @@
 
   /* scroll margin */
   .anchor { scroll-margin-top: 60px; }
-</style>
+
+  /* ===== EDITOR NOTE ===== */
+  .editor-note {
+    background: linear-gradient(135deg, rgba(96,165,250,0.08), rgba(167,139,250,0.08));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .editor-note-inner h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0.8rem;
+    color: var(--text);
+  }
+  .editor-note-inner p {
+    color: var(--text2);
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+  }
+  .editor-note-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: #0b0e17;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 6px;
+  }</style>
 </head>
 <body>
 
@@ -313,344 +340,250 @@
 <header class="hero">
   <div class="hero-badge">📡 第 42 期</div>
   <h1>AI 日报</h1>
-  <p class="subtitle">2026 年 7 月 5 日 · 星期日 · 北京时间</p>
+  <p class="subtitle">今日 12 条 AI 行业关键信号 — 头条 · 工具 · 论文 · 观点</p>
   <div class="hero-stats">
     <div class="hero-stat total"><div class="num" id="totalNum">22</div><div class="lbl">总条目</div></div>
-    <div class="hero-stat s1"><div class="num" id="s1Num">5</div><div class="lbl">模型发布/更新</div></div>
-    <div class="hero-stat s2"><div class="num" id="s2Num">5</div><div class="lbl">产品发布/更新</div></div>
-    <div class="hero-stat s3"><div class="num" id="s3Num">5</div><div class="lbl">行业动态</div></div>
-    <div class="hero-stat s4"><div class="num" id="s4Num">3</div><div class="lbl">论文研究</div></div>
-    <div class="hero-stat s5"><div class="num" id="s5Num">4</div><div class="lbl">技巧与观点</div></div>
+    <div class="hero-stat s1"><div class="num" id="s1Num">4</div><div class="lbl">大公司动态</div></div>
+    <div class="hero-stat s2"><div class="num" id="s2Num">3</div><div class="lbl">新工具 / 产品</div></div>
+    <div class="hero-stat s3"><div class="num" id="s3Num">2</div><div class="lbl">论文研究</div></div>
+    <div class="hero-stat s4"><div class="num" id="s4Num">3</div><div class="lbl">行业观点</div></div>
+    <div class="hero-stat s1"><div class="num" id="s1Num">4</div><div class="lbl">大公司动态</div></div>
+    <div class="hero-stat s2"><div class="num" id="s2Num">3</div><div class="lbl">新工具 / 产品</div></div>
+    <div class="hero-stat s3"><div class="num" id="s3Num">2</div><div class="lbl">论文研究</div></div>
+    <div class="hero-stat s4"><div class="num" id="s4Num">3</div><div class="lbl">行业观点</div></div>
+    <div class="hero-stat s1"><div class="num" id="s1Num">4</div><div class="lbl">大公司动态</div></div>
+    <div class="hero-stat s2"><div class="num" id="s2Num">3</div><div class="lbl">新工具 / 产品</div></div>
+    <div class="hero-stat s3"><div class="num" id="s3Num">2</div><div class="lbl">论文研究</div></div>
+    <div class="hero-stat s4"><div class="num" id="s4Num">3</div><div class="lbl">行业观点</div></div>
+    <div class="hero-stat s1"><div class="num" id="s1Num">4</div><div class="lbl">大公司动态</div></div>
+    <div class="hero-stat s2"><div class="num" id="s2Num">3</div><div class="lbl">新工具 / 产品</div></div>
+    <div class="hero-stat s3"><div class="num" id="s3Num">2</div><div class="lbl">论文研究</div></div>
+    <div class="hero-stat s4"><div class="num" id="s4Num">3</div><div class="lbl">行业观点</div></div>
+    <div class="hero-stat s1"><div class="num" id="s1Num">4</div><div class="lbl">大公司动态</div></div>
+    <div class="hero-stat s2"><div class="num" id="s2Num">3</div><div class="lbl">新工具 / 产品</div></div>
+    <div class="hero-stat s3"><div class="num" id="s3Num">2</div><div class="lbl">论文研究</div></div>
+    <div class="hero-stat s4"><div class="num" id="s4Num">3</div><div class="lbl">行业观点</div></div>
   </div>
 </header>
 
 <!-- ===== NAV ===== -->
 <nav class="nav-wrap">
   <div class="nav-inner">
-    <a href="#s1"><span class="dot" style="background:var(--green)"></span>模型发布/更新</a>
-    <a href="#s2"><span class="dot" style="background:var(--orange)"></span>产品发布/更新</a>
-    <a href="#s3"><span class="dot" style="background:var(--pink)"></span>行业动态</a>
-    <a href="#s4"><span class="dot" style="background:var(--purple)"></span>论文研究</a>
-    <a href="#s5"><span class="dot" style="background:var(--teal)"></span>技巧与观点</a>
+    <a href="#s1"><span class="dot" style="background:var(--accent)"></span>大公司动态</a>
+    <a href="#s2"><span class="dot" style="background:var(--green)"></span>新工具 / 产品</a>
+    <a href="#s3"><span class="dot" style="background:var(--purple)"></span>论文研究</a>
+    <a href="#s4"><span class="dot" style="background:var(--pink)"></span>行业观点</a>
   </div>
 </nav>
 
 <!-- ===== MAIN ===== -->
 <main class="container">
 
-  <!-- Section 1: 模型发布/更新 -->
-  <section class="section anchor" id="s1">
+    <section class="section editor-note">
+    <div class="editor-note-inner">
+      <div class="editor-note-tag">📌 编辑视角</div>
+      <h3>今天三件事值得看</h3>
+      <p><strong>① 自研芯片潮</strong>：昆仑芯、Anthropic、OpenAI 博通芯片三线推进，<strong>大厂算力军备竞赛</strong>已经从"买卡"升级到"造卡"。</p>
+      <p><strong>② Agent 工具平民化</strong>：阿里 Page Agent 自然语言操控网页，字节 Seedance 30 秒直出 4K 视频——<strong>零代码 Agent 时代</strong>全面到来。</p>
+      <p><strong>③ 安全与基建规范</strong>：Open AI Infra 五项技术规范 + Agent 运行时安全策略——<strong>跑得快的更要看护好</strong>。</p>
+    </div>
+  </section>
+
+    <section class="section anchor" id="s1">
     <div class="section-header s1">
-      <span class="icon">🧠</span>
-      <h2>模型发布 / 更新</h2>
-      <span class="count-badge">5 条</span>
-    </div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">1</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://new.qq.com/rain/a/20260630A06SO000" target="_blank" rel="noopener noreferrer">昆仑芯赴港上市，目标估值 500 亿美元碾压百度</a></div>
-            <div class="card-meta"><span class="source-chip">The Information · 36氪</span></div>
-            <div class="summary">百度旗下 AI 芯片子公司昆仑芯计划港股上市，目标估值 500 亿美元已超百度市值，下代芯片 M100 年底上市。</div>
-            <div class="card-actions"><a href="https://new.qq.com/rain/a/20260630A06SO000" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">2</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_6766a46fb5488852" target="_blank" rel="noopener noreferrer">Anthropic 与三星洽谈 2nm 定制 AI 芯片，挖角 OpenAI 核心工程师</a></div>
-            <div class="card-meta"><span class="source-chip">The Information</span></div>
-            <div class="summary">Anthropic 启动自研 AI 芯片，与三星洽谈 2nm 代工并挖角 OpenAI 芯片核心工程师 Clive Chan，算力成本控制战升级。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_6766a46fb5488852" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">3</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_9576a47db6253752" target="_blank" rel="noopener noreferrer">字节 Seedance 2.5 上线在即：30 秒直出 4K，50 个素材参考</a></div>
-            <div class="card-meta"><span class="source-chip">每日经济新闻</span></div>
-            <div class="summary">字节视频生成模型 Seedance 2.5 即将上线，支持单段 30 秒原生 4K 视频、50 个全模态素材输入，新增局部替换与 3D 白膜预览。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_9576a47db6253752" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">4</div>
-          <div class="card-body">
-            <div class="card-title">xAI 发布 Voice Agent Builder，两分钟创建语音智能体</div>
-            <div class="card-meta"><span class="source-chip">xAI 官方</span></div>
-            <div class="summary">基于 Grok Voice 模型的零代码语音 Agent 平台，端到端架构评分 67.3% 领先竞品，集成电话接入与 MCP 工具调用。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：xAI / AI产品汇 · 2026-07-02</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">5</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_7826a47aecf05652" target="_blank" rel="noopener noreferrer">Meta 组建云业务卖算力，释放算力过剩信号</a></div>
-            <div class="card-meta"><span class="source-chip">彭博社</span></div>
-            <div class="summary">Meta 组建 Meta Compute 云业务向外部客户出售多余 AI 算力，从疯狂买卡到卖卡，行业主题转向降本增效。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_7826a47aecf05652" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 2: 产品发布/更新 -->
-  <section class="section anchor" id="s2">
-    <div class="section-header s2">
-      <span class="icon">🚀</span>
-      <h2>产品发布 / 更新</h2>
-      <span class="count-badge">5 条</span>
-    </div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">6</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_9366a49d35039965" target="_blank" rel="noopener noreferrer">豆包、千问同步下线智能体功能，7 月 15 日大限将至</a></div>
-            <div class="card-meta"><span class="source-chip">AI周报</span></div>
-            <div class="summary">字节豆包与阿里千问同步通知 7 月 15 日下线智能体功能，同期《人工智能拟人化互动服务管理暂行办法》正式施行。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_9366a49d35039965" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">7</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_4956a49c5f592352" target="_blank" rel="noopener noreferrer">2026 全球数字经济大会 AIGC 论坛启幕</a></div>
-            <div class="card-meta"><span class="source-chip">人民网</span></div>
-            <div class="summary">以"智创共生·数绘未来"为主题，首次聚焦 AIGC 领域，探讨从技术突破迈向产业深度融合的破局之路。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_4956a49c5f592352" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">8</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_3636a4a0b3792665" target="_blank" rel="noopener noreferrer">京东智能体平台运行超 400 个大型 AI 应用</a></div>
-            <div class="card-meta"><span class="source-chip">央广网</span></div>
-            <div class="summary">京东云披露智能体平台支撑近 4 万个智能体，覆盖采销、物流、客服、研发全业务环节，AI 深度嵌入供应链。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_3636a4a0b3792665" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">9</div>
-          <div class="card-body">
-            <div class="card-title">阿里巴巴开源 Page Agent，自然语言操控网页界面</div>
-            <div class="card-meta"><span class="source-chip">阿里云</span></div>
-            <div class="summary">新型 GUI 代理工具基于 JavaScript 读取网页 DOM 结构，解析执行自然语言指令，实现网页端零门槛操控。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：CSDN · 2026-07-04</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">10</div>
-          <div class="card-body">
-            <div class="card-title">Meta 低调推出 AI 应用 Pocket，文本指令生成互动小游戏</div>
-            <div class="card-meta"><span class="source-chip">科技媒体</span></div>
-            <div class="summary">用户仅需输入文本 Prompt 即可快速生成可分享的轻量级互动小游戏，AI 从生产力工具延伸到社交娱乐创作。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：AI创作导航 · 2026-07</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 3: 行业动态 -->
-  <section class="section anchor" id="s3">
-    <div class="section-header s3">
-      <span class="icon">📊</span>
-      <h2>行业动态</h2>
-      <span class="count-badge">5 条</span>
-    </div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">11</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0916a4a068e04252" target="_blank" rel="noopener noreferrer">五部委联合出手，AI 拟人化新规 7 月 15 日强制落地</a></div>
-            <div class="card-meta"><span class="source-chip">央广网</span></div>
-            <div class="summary">《人工智能拟人化互动服务管理暂行办法》要求 UGC 智能体逐个备案、全程审核、平台背全锅，未成年人限用拟人互动。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0916a4a068e04252" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">12</div>
-          <div class="card-body">
-            <div class="card-title">ChatGPT 全球市场份额首度跌破 50%，格局重塑</div>
-            <div class="card-meta"><span class="source-chip">感应塔报告</span></div>
-            <div class="summary">据感应塔《2026 年 AI 行业报告》，ChatGPT 全球 AI 助手份额跌破 50%，微软 MAI、GPT-5.6、MiniMax M3 密集发布分流。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：新华社 / 感应塔 · 2026-06-16</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">13</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_4756a49ae6503052" target="_blank" rel="noopener noreferrer">2026 全球数字经济大会开幕，"AI + 产业"成主旋律</a></div>
-            <div class="card-meta"><span class="source-chip">央广网</span></div>
-            <div class="summary">以"智驱实体，数创未来"为主题，聚焦 AI 对千行百业的深度重塑，探索从技术突破到真实生产力的落地路径。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_4756a49ae6503052" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">14</div>
-          <div class="card-body">
-            <div class="card-title">SpaceX 收购代码编辑器 Cursor，第三方模型接入权引关注</div>
-            <div class="card-meta"><span class="source-chip">科技媒体</span></div>
-            <div class="summary">SpaceX 收购 AI 代码编辑器 Cursor，后者是 GPT-4.5 / Claude 主流开发前端，第三方大模型接入权归属引人猜测。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：AI创作导航 · 2026-07</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">15</div>
-          <div class="card-body">
-            <div class="card-title">OpenAI 携手博通发布首款定制芯片 Jalapeño</div>
-            <div class="card-meta"><span class="source-chip">电子工程世界</span></div>
-            <div class="summary">OpenAI 与博通联合发布首款定制 AI 芯片，标志着 OpenAI 从模型公司向芯片一体化方向迈出实质一步。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：电子工程世界 · 2026-06-25</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 4: 论文研究 -->
-  <section class="section anchor" id="s4">
-    <div class="section-header s4">
-      <span class="icon">🔬</span>
-      <h2>论文研究</h2>
-      <span class="count-badge">3 条</span>
-    </div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">16</div>
-          <div class="card-body">
-            <div class="card-title">中国科学家发布全球首个地层学 AI 大模型</div>
-            <div class="card-meta"><span class="source-chip">央广网</span></div>
-            <div class="summary">全球首个地层学 AI 及智能全球地层剖面对比系统发布，46 亿年地球演化史首次拥有全球共享数据库。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：央广网 · 2026-07-03</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">17</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_3566a48ab3d82752" target="_blank" rel="noopener noreferrer">Open AI Infra 社区发布五项 AI 基础设施技术规范</a></div>
-            <div class="card-meta"><span class="source-chip">GCC-Open AI Infra</span></div>
-            <div class="summary">集中发布液冷整机柜、AIDC 基础设施等五项规范，完善 AI 算力基础设施标准体系，启动 OPEN NPO 项目。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_3566a48ab3d82752" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">18</div>
-          <div class="card-body">
-            <div class="card-title">Claude Opus "人类终极测试"正确率首超 50%</div>
-            <div class="card-meta"><span class="source-chip">Anthropic</span></div>
-            <div class="summary">Anthropic 旗舰模型 Claude Opus 4.6/4.7 在人类终极测试正确率超 50%，多项基准领先标志模型能力新高度。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：CSDN 综合 · 2026-06</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 5: 技巧与观点 -->
-  <section class="section anchor" id="s5">
-    <div class="section-header s5">
-      <span class="icon">💡</span>
-      <h2>技巧与观点</h2>
+      <span class="icon">🏢</span>
+      <h2>大公司动态</h2>
       <span class="count-badge">4 条</span>
     </div>
     <div class="card-grid">
       <div class="card">
-        <div class="card-top">
-          <div class="idx">19</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0846a47b0c034852" target="_blank" rel="noopener noreferrer">十个 AI Agent 工作流模板，先设计流程再写 Prompt</a></div>
-            <div class="card-meta"><span class="source-chip">Anthropic 指南</span></div>
-            <div class="summary">最佳 Agent 实现是简单可组合的模式：触发、上下文、工具、决策规则、人工检查点五要素，框架越轻越好。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0846a47b0c034852" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
+      <div class="card-top">
+      <div class="idx">1</div>
+      <div class="card-body">
+      <div class="card-title"><a href="https://new.qq.com/rain/a/20260630A06SO000" target="_blank" rel="noopener noreferrer">昆仑芯赴港上市，目标估值 500 亿美元碾压百度</a></div>
+      <div class="card-meta"><span class="source-chip">The Information · 36氪</span></div>
+      <div class="summary">百度旗下 AI 芯片子公司昆仑芯计划港股上市，目标估值 500 亿美元已超百度市值，下代芯片 M100 年底上市。</div>
+      <div class="card-actions"><a href="https://new.qq.com/rain/a/20260630A06SO000" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
       </div>
+      </div>
+      </div>
+
       <div class="card">
-        <div class="card-top">
-          <div class="idx">20</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_8016a484ec259352" target="_blank" rel="noopener noreferrer">AI Agent 落地真相：71% 在试用，不到 10% 跑通</a></div>
-            <div class="card-meta"><span class="source-chip">Kore.ai 调查</span></div>
-            <div class="summary">Kore.ai 调查显示 71% 企业确实在用 AI Agent，但 Gartner 预测 40% 嵌入率与现实间存在巨大落地鸿沟。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_8016a484ec259352" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div>
+      <div class="card-top">
+      <div class="idx">2</div>
+      <div class="card-body">
+      <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_6766a46fb5488852" target="_blank" rel="noopener noreferrer">Anthropic 与三星洽谈 2nm 定制 AI 芯片，挖角 OpenAI 核心工程师</a></div>
+      <div class="card-meta"><span class="source-chip">The Information</span></div>
+      <div class="summary">Anthropic 启动自研 AI 芯片，与三星洽谈 2nm 代工并挖角 OpenAI 芯片核心工程师 Clive Chan，算力成本控制战升级。</div>
+      <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_6766a46fb5488852" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
       </div>
+      </div>
+      </div>
+
       <div class="card">
-        <div class="card-top">
-          <div class="idx">21</div>
-          <div class="card-body">
-            <div class="card-title">2026 大厂 Agent 面试风向：从调 API 到搭系统</div>
-            <div class="card-meta"><span class="source-chip">CSDN · 面试趋势</span></div>
-            <div class="summary">Agent 面试转向系统设计能力评估，ReAct/CoT/ToT、MCP 协议、多 Agent 协作、异常处理与安全成五大核心维度。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：CSDN · 2026-07-01</span></div>
-          </div>
-        </div>
+      <div class="card-top">
+      <div class="idx">3</div>
+      <div class="card-body">
+      <div class="card-title">OpenAI 携手博通发布首款定制芯片 Jalapeño</div>
+      <div class="card-meta"><span class="source-chip">电子工程世界</span></div>
+      <div class="summary">OpenAI 与博通联合发布首款定制 AI 芯片，标志着 OpenAI 从模型公司向芯片一体化方向迈出实质一步。</div>
+      <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：电子工程世界 · 2026-06-25</span></div>
       </div>
+      </div>
+
       <div class="card">
-        <div class="card-top">
-          <div class="idx">22</div>
-          <div class="card-body">
-            <div class="card-title">2026 年必须掌握的 Agent 运行时安全策略</div>
-            <div class="card-meta"><span class="source-chip">CSDN · 安全</span></div>
-            <div class="summary">Agent 动态工具选择引入"越狱"风险，权限感知检索、受控写入与人工介入成为 Agent 安全防护三大关键。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：CSDN · 2026-07-02</span></div>
-          </div>
-        </div>
+      <div class="card-top">
+      <div class="idx">4</div>
+      <div class="card-body">
+      <div class="card-title">SpaceX 收购代码编辑器 Cursor，第三方模型接入权引关注</div>
+      <div class="card-meta"><span class="source-chip">科技媒体</span></div>
+      <div class="summary">SpaceX 收购 AI 代码编辑器 Cursor，后者是 GPT-4.5 / Claude 主流开发前端，第三方大模型接入权归属引人猜测。</div>
+      <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：AI创作导航 · 2026-07</span></div>
       </div>
+      </div>
+      </div>
+
     </div>
   </section>
+
+    <section class="section anchor" id="s2">
+    <div class="section-header s2">
+      <span class="icon">🔧</span>
+      <h2>新工具 / 产品</h2>
+      <span class="count-badge">3 条</span>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+      <div class="card-top">
+      <div class="idx">5</div>
+      <div class="card-body">
+      <div class="card-title">阿里巴巴开源 Page Agent，自然语言操控网页界面</div>
+      <div class="card-meta"><span class="source-chip">阿里云</span></div>
+      <div class="summary">新型 GUI 代理工具基于 JavaScript 读取网页 DOM 结构，解析执行自然语言指令，实现网页端零门槛操控。</div>
+      <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：CSDN · 2026-07-04</span></div>
+      </div>
+      </div>
+      </div>
+
+      <div class="card">
+      <div class="card-top">
+      <div class="idx">6</div>
+      <div class="card-body">
+      <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_9576a47db6253752" target="_blank" rel="noopener noreferrer">字节 Seedance 2.5 上线在即：30 秒直出 4K，50 个素材参考</a></div>
+      <div class="card-meta"><span class="source-chip">每日经济新闻</span></div>
+      <div class="summary">字节视频生成模型 Seedance 2.5 即将上线，支持单段 30 秒原生 4K 视频、50 个全模态素材输入，新增局部替换与 3D 白膜预览。</div>
+      <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_9576a47db6253752" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+      </div>
+      </div>
+      </div>
+
+      <div class="card">
+      <div class="card-top">
+      <div class="idx">7</div>
+      <div class="card-body">
+      <div class="card-title">Meta 低调推出 AI 应用 Pocket，文本指令生成互动小游戏</div>
+      <div class="card-meta"><span class="source-chip">科技媒体</span></div>
+      <div class="summary">用户仅需输入文本 Prompt 即可快速生成可分享的轻量级互动小游戏，AI 从生产力工具延伸到社交娱乐创作。</div>
+      <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：AI创作导航 · 2026-07</span></div>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+    <section class="section anchor" id="s3">
+    <div class="section-header s3">
+      <span class="icon">📄</span>
+      <h2>论文研究</h2>
+      <span class="count-badge">2 条</span>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+      <div class="card-top">
+      <div class="idx">8</div>
+      <div class="card-body">
+      <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_3566a48ab3d82752" target="_blank" rel="noopener noreferrer">Open AI Infra 社区发布五项 AI 基础设施技术规范</a></div>
+      <div class="card-meta"><span class="source-chip">GCC-Open AI Infra</span></div>
+      <div class="summary">集中发布液冷整机柜、AIDC 基础设施等五项规范，完善 AI 算力基础设施标准体系，启动 OPEN NPO 项目。</div>
+      <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_3566a48ab3d82752" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+      </div>
+      </div>
+      </div>
+
+      <div class="card">
+      <div class="card-top">
+      <div class="idx">9</div>
+      <div class="card-body">
+      <div class="card-title">Claude Opus "人类终极测试"正确率首超 50%</div>
+      <div class="card-meta"><span class="source-chip">Anthropic</span></div>
+      <div class="summary">Anthropic 旗舰模型 Claude Opus 4.6/4.7 在人类终极测试正确率超 50%，多项基准领先标志模型能力新高度。</div>
+      <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：CSDN 综合 · 2026-06</span></div>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+    <section class="section anchor" id="s4">
+    <div class="section-header s4">
+      <span class="icon">💡</span>
+      <h2>行业观点</h2>
+      <span class="count-badge">3 条</span>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+      <div class="card-top">
+      <div class="idx">10</div>
+      <div class="card-body">
+      <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0846a47b0c034852" target="_blank" rel="noopener noreferrer">十个 AI Agent 工作流模板，先设计流程再写 Prompt</a></div>
+      <div class="card-meta"><span class="source-chip">Anthropic 指南</span></div>
+      <div class="summary">最佳 Agent 实现是简单可组合的模式：触发、上下文、工具、决策规则、人工检查点五要素，框架越轻越好。</div>
+      <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0846a47b0c034852" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+      </div>
+      </div>
+      </div>
+
+      <div class="card">
+      <div class="card-top">
+      <div class="idx">11</div>
+      <div class="card-body">
+      <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_8016a484ec259352" target="_blank" rel="noopener noreferrer">AI Agent 落地真相：71% 在试用，不到 10% 跑通</a></div>
+      <div class="card-meta"><span class="source-chip">Kore.ai 调查</span></div>
+      <div class="summary">Kore.ai 调查显示 71% 企业确实在用 AI Agent，但 Gartner 预测 40% 嵌入率与现实间存在巨大落地鸿沟。</div>
+      <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_8016a484ec259352" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+      </div>
+      </div>
+      </div>
+
+      <div class="card">
+      <div class="card-top">
+      <div class="idx">12</div>
+      <div class="card-body">
+      <div class="card-title">2026 年必须掌握的 Agent 运行时安全策略</div>
+      <div class="card-meta"><span class="source-chip">CSDN · 安全</span></div>
+      <div class="summary">Agent 动态工具选择引入"越狱"风险，权限感知检索、受控写入与人工介入成为 Agent 安全防护三大关键。</div>
+      <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：CSDN · 2026-07-02</span></div>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
 
 </main>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="count-summary">
-    <span>🧠 模型发布/更新 <strong>5</strong> 条</span>
+    <span>🏢 大公司动态 <strong>4</strong> 条</span>
     <span>·</span>
-    <span>🚀 产品发布/更新 <strong>5</strong> 条</span>
+    <span>🔧 新工具/产品 <strong>3</strong> 条</span>
     <span>·</span>
-    <span>📊 行业动态 <strong>5</strong> 条</span>
+    <span>📄 论文研究 <strong>2</strong> 条</span>
     <span>·</span>
-    <span>🔬 论文研究 <strong>3</strong> 条</span>
-    <span>·</span>
-    <span>💡 技巧与观点 <strong>4</strong> 条</span>
+    <span>💡 行业观点 <strong>3</strong> 条</span>
   </div>
-  <p style="margin-bottom:0.3rem">共 <strong>22</strong> 条 · 第 42 期 · 2026 年 7 月 5 日 · 星期日</p>
+  <p style="margin-bottom:0.3rem">共 <strong>12</strong> 条 · 第 42 期 · 2026 年 7 月 6 日 · 星期一</p>
   <div class="sources">
     数据来源：The Information · 彭博社 · 人民网 · 央广网 · 36氪 · 每日经济新闻 · 钛媒体 · 科创板日报 · 新华社 · 感应塔 · Kore.ai · GitHUB · CSDN · xAI · Anthropic · GCC-Open AI Infra · 电子工程世界 · 企鹅号 · 站长之家
   </div>

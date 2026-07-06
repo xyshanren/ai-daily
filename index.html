@@ -24,6 +24,9 @@
     --radius: 12px;
     font-size: 15px;
   }
+  --cyan: #22d3ee;
+  --cyan-dim: #0e7490;
+}
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
     background: var(--bg);
@@ -336,10 +339,10 @@
 <header class="hero">
   <div class="hero-badge">📡 第 42 期 · 2026.07.06</div>
   <h1>AI 日报</h1>
-  <p class="subtitle">三条主线 · 读懂 AI 行业今天的真正信号</p>
+  <p class="subtitle">四条主线 · 读懂 AI 行业今天的真正信号</p>
   <div class="hero-stats">
-    <div class="hero-stat total"><div class="num">14</div><div class="lbl">条新闻</div></div>
-    <div class="hero-stat themes"><div class="num">3</div><div class="lbl">条主线</div></div>
+    <div class="hero-stat total"><div class="num">15</div><div class="lbl">条内容</div></div>
+    <div class="hero-stat themes"><div class="num">4</div><div class="lbl">条主线</div></div>
     <div class="hero-stat sources"><div class="num">19</div><div class="lbl">个信源</div></div>
   </div>
 </header>
@@ -350,6 +353,7 @@
     <a href="#t1"><span class="dot" style="background:var(--accent)"></span>算力即权力</a>
     <a href="#t2"><span class="dot" style="background:var(--green)"></span>Agent 动手派</a>
     <a href="#t3"><span class="dot" style="background:var(--purple)"></span>评估标准升级</a>
+    <a href="#t4"><span class="dot" style="background:var(--cyan)"></span>研究前沿</a>
   </div>
 </nav>
 
@@ -534,12 +538,38 @@
     </div>
   </section>
 
+  <section class="section anchor theme-4" id="t4">
+    <div class="section-header" style="--theme:var(--cyan)">
+      <span class="icon">🧪</span>
+      <div class="section-title-block">
+        <h2>研究前沿</h2>
+      </div>
+      <span class="count-badge">1 条</span>
+    </div>
+    <div class="card-grid">
+      <div class="card card-research">
+        <div class="card-top">
+          <div class="idx">15</div>
+          <div class="card-body">
+            <div class="card-title"><a href="https://arxiv.org/pdf/2510.24701" target="_blank" rel="noopener noreferrer">Tongyi DeepResearch：开源 agentic LLM，7 大搜索基准 SOTA</a></div>
+            <div class="card-meta"><span class="source-chip">arXiv 2510.24701</span><span class="source-chip">Alibaba-NLP</span></div>
+            <div class="research-meta"><span class="rm-tag">论文</span><span class="rm-tag">开源</span><span class="rm-tag">SOTA</span></div>
+            <div class="summary"><strong>核心：</strong>30.5B 总参 / 3.3B 激活 的 agentic 搜索模型，专为长程深度信息检索设计。</div>
+            <div class="summary"><strong>方法：</strong>自动化数据合成 + agentic 持续预训练 + 端到端 RL（GRPO + token 级策略梯度 + LOO advantage + 负样本过滤）+ 双推理范式（ReAct / IterResearch Heavy）。</div>
+            <div class="summary"><strong>结果：</strong>Humanity's Last Exam / BrowseComp / BrowseComp-ZH / WebWalkerQA / xbench-DeepSearch / FRAMES / SimpleQA 共 7 项 SOTA。</div>
+            <div class="summary"><strong>复现：</strong>✅ 权重开源（HF + ModelScope），含 inference / evaluation / WebAgent 完整代码。</div>
+            <div class="card-actions"><a href="https://github.com/Alibaba-NLP/DeepResearch" target="_blank" rel="noopener noreferrer">代码仓库</a> · <a href="https://arxiv.org/pdf/2510.24701" target="_blank" rel="noopener noreferrer">论文 PDF</a> · <a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener noreferrer">模型权重</a></div>
+          </div>
+        </div></div>
+    </div>
+  </section>
+
 <footer class="footer">
   <p class="footer-tagline">📌 编辑签名：今天三件事——造卡、动手、画线。<strong>没有泡沫，也没有革命，是基础设施在补完。</strong></p>
   <div class="sources-row">
     <span class="src">The Information</span>·<span class="src">36氪</span>·<span class="src">CSDN</span>·<span class="src">Anthropic</span>·<span class="src">GCC-Open AI Infra</span>
   </div>
-  <p class="footer-meta">第 42 期 · 2026.07.06 · 星期一 · 共 14 条 · <a href="https://ai-daily-9yz.pages.dev/">ai-daily.pages.dev</a></p>
+  <p class="footer-meta">第 42 期 · 2026.07.06 · 星期一 · 共 15 条 · <a href="https://ai-daily-9yz.pages.dev/">ai-daily.pages.dev</a></p>
 </footer>
 
 <script>

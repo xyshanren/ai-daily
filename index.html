@@ -304,6 +304,9 @@
   .hero-stat .num { color: var(--text); }
 
   /* ===== RESPONSIVE ===== */
+  @media (max-width: 960px) {
+    .card-grid { grid-template-columns: 1fr; }
+  }
   @media (max-width: 640px) {
     .hero { padding: 2rem 1rem 1.5rem; }
     .hero h1 { font-size: 1.5rem; }
@@ -314,6 +317,8 @@
     .nav-wrap { padding: 0.4rem 0.5rem; }
     .nav-inner a { font-size: 0.72rem; padding: 0.3rem 0.5rem; }
     .container { padding: 1rem 0.75rem 2rem; }
+    .card .card-title { -webkit-line-clamp: 3; }
+    .footer .sources-row { font-size: 0.68rem; line-height: 1.6; }
   }
 
   /* scroll margin */
@@ -477,8 +482,8 @@
           <div class="idx">9</div>
           <div class="card-body">
             <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_8016a484ec259352" target="_blank" rel="noopener noreferrer">AI Agent 落地真相：71% 在试用，不到 10% 跑通</a></div>
-            <div class="card-meta"><span class="source-chip">Kore.ai 调查</span></div>
-            <div class="summary">Kore.ai 调查显示 71% 企业确实在用 AI Agent，但 Gartner 预测 40% 嵌入率与现实间存在巨大落地鸿沟。</div>
+            <div class="card-meta"><span class="source-chip">Kore.ai、McKinsey</span></div>
+            <div class="summary">Kore.ai 调查显示 71% 企业在用 AI Agent，但 McKinsey 数据表明不到 10% 实现规模化部署。71% 和 <10% 之间隔着 60 个百分点。</div>
             <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_8016a484ec259352" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
           </div>
         </div></div>

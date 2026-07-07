@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 日报 · 2026年7月6日 · 第42期</title>
+<title>AI 日报 · 2026年7月8日 · 第70期</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -24,9 +24,6 @@
     --radius: 12px;
     font-size: 15px;
   }
-  --cyan: #22d3ee;
-  --cyan-dim: #0e7490;
-}
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
     background: var(--bg);
@@ -271,6 +268,21 @@
   }
   .card .card-actions a::after { content: ' ↗'; }
 
+  /* ===== RESEARCH CARD ===== */
+  .card-research { grid-column: 1 / -1; }
+
+  /* Research meta tags */
+  .research-meta { margin-bottom: 0.4rem; display: flex; gap: 0.35rem; flex-wrap: wrap; }
+  .rm-tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 6px;
+    background: rgba(168,85,247,0.12);
+    color: var(--purple);
+    border: 1px solid rgba(168,85,247,0.18);
+  }
+
   /* ===== FOOTER ===== */
   .footer {
     text-align: center;
@@ -280,28 +292,16 @@
     font-size: 0.82rem;
     line-height: 1.8;
   }
-  .footer .count-summary {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 0.3rem 0.8rem;
-    justify-content: center;
+  .footer .footer-tagline {
+    max-width: 720px; margin: 0 auto 0.8rem; color: var(--text);
+    font-size: 0.88rem; line-height: 1.7;
+  }
+  .footer .sources-row {
+    color: var(--text2); font-size: 0.78rem; opacity: 0.75;
     margin-bottom: 0.5rem;
-    font-size: 0.78rem;
   }
-  .footer .count-summary span { white-space: nowrap; }
-  .footer .sources {
-    max-width: 600px;
-    margin: 0 auto;
-    color: var(--text2);
-    opacity: 0.7;
-    font-size: 0.72rem;
-  }
-
-  /* ===== RESEARCH CARD: full-width when alone in grid ===== */
-  .card-research { grid-column: 1 / -1; }
-
-  /* ===== HERO STATS: 统一显式色（防继承链断） ===== */
-  .hero-stat .num { color: var(--text); }
+  .footer .footer-meta { color: var(--text2); font-size: 0.74rem; opacity: 0.6; }
+  .footer .footer-meta a { color: var(--accent); }
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 960px) {
@@ -318,7 +318,6 @@
     .nav-inner a { font-size: 0.72rem; padding: 0.3rem 0.5rem; }
     .container { padding: 1rem 0.75rem 2rem; }
     .card .card-title { -webkit-line-clamp: 3; }
-    .footer .sources-row { font-size: 0.68rem; line-height: 1.6; }
   }
 
   /* scroll margin */
@@ -332,278 +331,267 @@
   .section-subtitle { color: var(--text2); font-size: 0.82rem; margin-top: 2px; }
   .section-header[style*="--theme:var(--accent)"] h2 { color: var(--accent); }
   .section-header[style*="--theme:var(--green)"] h2 { color: var(--green); }
+  .section-header[style*="--theme:var(--orange)"] h2 { color: var(--orange); }
+  .section-header[style*="--theme:var(--pink)"] h2 { color: var(--pink); }
   .section-header[style*="--theme:var(--purple)"] h2 { color: var(--purple); }
-
-  /* ===== FOOTER minimal ===== */
-  .footer .footer-tagline {
-    max-width: 720px; margin: 0 auto 0.8rem; color: var(--text);
-    font-size: 0.88rem; line-height: 1.7;
-  }
-  .footer .sources-row {
-    color: var(--text2); font-size: 0.78rem; opacity: 0.75;
-    margin-bottom: 0.5rem;
-  }
-  .footer .sources-row .src { display: inline; }
-  .footer .footer-meta { color: var(--text2); font-size: 0.74rem; opacity: 0.6; }
-  .footer .footer-meta a { color: var(--accent); }
 </style>
 </head>
 <body>
 
 <!-- ===== HERO ===== -->
 <header class="hero">
-  <div class="hero-badge">📡 第 42 期 · 2026.07.06</div>
+  <div class="hero-badge">📡 第 70 期 · 2026.07.08</div>
   <h1>AI 日报</h1>
-  <p class="subtitle">四条主线 · 读懂 AI 行业今天的真正信号</p>
+  <p class="subtitle">四条主线 · 国产算力觉醒 · 大模型分层竞赛</p>
   <div class="hero-stats">
-    <div class="hero-stat total"><div class="num">16</div><div class="lbl">条内容</div></div>
+    <div class="hero-stat total"><div class="num">14</div><div class="lbl">条内容</div></div>
     <div class="hero-stat themes"><div class="num">4</div><div class="lbl">条主线</div></div>
-    <div class="hero-stat sources"><div class="num">19</div><div class="lbl">个信源</div></div>
+    <div class="hero-stat sources"><div class="num">16</div><div class="lbl">个信源</div></div>
   </div>
 </header>
 
 <!-- ===== NAV ===== -->
 <nav class="nav-wrap">
   <div class="nav-inner">
-    <a href="#t1"><span class="dot" style="background:var(--accent)"></span>算力即权力</a>
-    <a href="#t2"><span class="dot" style="background:var(--green)"></span>Agent 动手派</a>
-    <a href="#t3"><span class="dot" style="background:var(--purple)"></span>评估标准升级</a>
-    <a href="#t4"><span class="dot" style="background:var(--cyan)"></span>研究前沿</a>
+    <a href="#t1"><span class="dot" style="background:var(--green)"></span>国产算力大爆发</a>
+    <a href="#t2"><span class="dot" style="background:var(--orange)"></span>大模型分层竞争</a>
+    <a href="#t3"><span class="dot" style="background:var(--pink)"></span>AI+产业落地加速</a>
+    <a href="#t4"><span class="dot" style="background:var(--purple)"></span>研究前沿</a>
   </div>
 </nav>
 
 <!-- ===== MAIN ===== -->
 <main class="container">
+
+<!-- ===== 主线1: 国产算力大爆发 ===== -->
 <section class="section anchor theme-1" id="t1">
-    <div class="section-header" style="--theme:var(--accent)">
-      <span class="icon">💎</span>
-      <div class="section-title-block">
-        <h2>算力即权力</h2>
-        <p class="section-subtitle">自研芯片潮：大厂从"买卡"到"造卡"</p>
+  <div class="section-header" style="--theme:var(--green)">
+    <span class="icon">🚀</span>
+    <div class="section-title-block">
+      <h2>国产算力大爆发</h2>
+      <p class="section-subtitle">万亿参数开源 + 产业渗透率破80% + 资本开支万亿级</p>
+    </div>
+    <span class="count-badge">4 条</span>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">1</div>
+        <div class="card-body">
+          <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_5636a4b46fa18652" target="_blank" rel="noopener noreferrer">美团LongCat-2.0正式开源：1.6万亿参数，全程国产算力训练</a></div>
+          <div class="card-meta"><span class="source-chip">北京商报</span></div>
+          <div class="summary">美团开源全球首个全程国产算力万亿参数大模型，1.6T总参数/48B激活/1M上下文，华为昇腾等多家国产芯片同步适配。</div>
+          <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_5636a4b46fa18652" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+        </div>
       </div>
-      <span class="count-badge">4 条</span>
     </div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">1</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://new.qq.com/rain/a/20260630A06SO000" target="_blank" rel="noopener noreferrer">昆仑芯赴港上市，目标估值 500 亿美元碾压百度</a></div>
-            <div class="card-meta"><span class="source-chip">The Information · 36氪</span></div>
-            <div class="summary">百度旗下 AI 芯片子公司昆仑芯计划港股上市，目标估值 500 亿美元已超百度市值，下代芯片 M100 年底上市。</div>
-            <div class="card-actions"><a href="https://new.qq.com/rain/a/20260630A06SO000" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div></div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">2</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_6766a46fb5488852" target="_blank" rel="noopener noreferrer">Anthropic 与三星洽谈 2nm 定制 AI 芯片，挖角 OpenAI 核心工程师</a></div>
-            <div class="card-meta"><span class="source-chip">The Information</span></div>
-            <div class="summary">Anthropic 启动自研 AI 芯片，与三星洽谈 2nm 代工并挖角 OpenAI 芯片核心工程师 Clive Chan，算力成本控制战升级。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_6766a46fb5488852" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div></div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">3</div>
-          <div class="card-body">
-            <div class="card-title">OpenAI 携手博通发布首款定制芯片 Jalapeño</div>
-            <div class="card-meta"><span class="source-chip">电子工程世界</span></div>
-            <div class="summary">OpenAI 与博通联合发布首款定制 AI 芯片，标志着 OpenAI 从模型公司向芯片一体化方向迈出实质一步。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：电子工程世界 · 2026-06-25</span></div>
-          </div>
-        </div></div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">4</div>
-          <div class="card-body">
-            <div class="card-title">SpaceX 收购代码编辑器 Cursor，第三方模型接入权引关注</div>
-            <div class="card-meta"><span class="source-chip">科技媒体</span></div>
-            <div class="summary">SpaceX 收购 AI 代码编辑器 Cursor，后者是 GPT-4.5 / Claude 主流开发前端，第三方大模型接入权归属引人猜测。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：AI创作导航 · 2026-07</span></div>
-          </div>
-        </div></div>
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">2</div>
+        <div class="card-body">
+          <div class="card-title"><a href="https://new.qq.com/rain/a/20260707A04UFR00" target="_blank" rel="noopener noreferrer">发改委：重点行业AI渗透率突破80%，AI终端销量将首超非AI</a></div>
+          <div class="card-meta"><span class="source-chip">财联社</span></div>
+          <div class="summary">发改委宣布重点行业AI渗透率超80%，去年AI终端出货量超1亿台，今年AI手机/电脑销量预计首次超过传统产品。</div>
+          <div class="card-actions"><a href="https://new.qq.com/rain/a/20260707A04UFR00" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+        </div>
+      </div>
     </div>
-  </section>
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">3</div>
+        <div class="card-body">
+          <div class="card-title">Meta推出Meta Compute算力租赁项目，盘活闲置GPU集群</div>
+          <div class="card-meta"><span class="source-chip">腾讯新闻</span></div>
+          <div class="summary">Meta宣布开放闲置H100/H200 GPU集群算力租赁与Llama MaaS服务，内部算力利用率约65%，消息发布当日市值飙升1270亿美元。</div>
+          <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_2486a4b741e52352" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">4</div>
+        <div class="card-body">
+          <div class="card-title">高盛：6年AI资本开支将达7.6万亿美元，年度投入7650亿起步</div>
+          <div class="card-meta"><span class="source-chip">观点网</span></div>
+          <div class="summary">高盛报告称2026-2031年全球AI资本开支合计约7.6万亿美元，从7650亿升至1.64万亿，超大规模云厂商贡献超6万亿。</div>
+          <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_6096a4c3fd693552" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="section anchor theme-2" id="t2">
-    <div class="section-header" style="--theme:var(--green)">
-      <span class="icon">🤖</span>
-      <div class="section-title-block">
-        <h2>Agent 走向"动手派"</h2>
-        <p class="section-subtitle">从对话到执行：工具平民化 + 落地鸿沟</p>
+<!-- ===== 主线2: 大模型分层竞争 ===== -->
+<section class="section anchor theme-2" id="t2">
+  <div class="section-header" style="--theme:var(--orange)">
+    <span class="icon">⚡</span>
+    <div class="section-title-block">
+      <h2>大模型分层竞争</h2>
+      <p class="section-subtitle">GPT-5.6三档首发 · Sonnet 5价格腰斩 · 智谱进军代码赛道</p>
+    </div>
+    <span class="count-badge">4 条</span>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">5</div>
+        <div class="card-body">
+          <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_2486a4b741e52352" target="_blank" rel="noopener noreferrer">OpenAI发布GPT-5.6系列：Sol/Terra/Luna三档分层，Terminal-Bench SOTA 91.9%</a></div>
+          <div class="card-meta"><span class="source-chip">腾讯新闻</span></div>
+          <div class="summary">OpenAI推出GPT-5.6限量预览：旗舰Sol可生成子Agent并行处理任务，在Terminal-Bench达91.9%SOTA，中端Terra成本减半，经济型Luna主打高并发。</div>
+          <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_2486a4b741e52352" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+        </div>
       </div>
-      <span class="count-badge">6 条</span>
     </div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">5</div>
-          <div class="card-body">
-            <div class="card-title">阿里巴巴开源 Page Agent，自然语言操控网页界面</div>
-            <div class="card-meta"><span class="source-chip">阿里云</span></div>
-            <div class="summary">新型 GUI 代理工具基于 JavaScript 读取网页 DOM 结构，解析执行自然语言指令，实现网页端零门槛操控。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：CSDN · 2026-07-04</span></div>
-          </div>
-        </div></div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">6</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_9576a47db6253752" target="_blank" rel="noopener noreferrer">字节 Seedance 2.5 上线在即：30 秒直出 4K，50 个素材参考</a></div>
-            <div class="card-meta"><span class="source-chip">每日经济新闻</span></div>
-            <div class="summary">字节视频生成模型 Seedance 2.5 即将上线，支持单段 30 秒原生 4K 视频、50 个全模态素材输入，新增局部替换与 3D 白膜预览。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_9576a47db6253752" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div></div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">7</div>
-          <div class="card-body">
-            <div class="card-title">Meta 低调推出 AI 应用 Pocket，文本指令生成互动小游戏</div>
-            <div class="card-meta"><span class="source-chip">科技媒体</span></div>
-            <div class="summary">用户仅需输入文本 Prompt 即可快速生成可分享的轻量级互动小游戏，AI 从生产力工具延伸到社交娱乐创作。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：AI创作导航 · 2026-07</span></div>
-          </div>
-        </div></div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">8</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0846a47b0c034852" target="_blank" rel="noopener noreferrer">十个 AI Agent 工作流模板，先设计流程再写 Prompt</a></div>
-            <div class="card-meta"><span class="source-chip">Anthropic 指南</span></div>
-            <div class="summary">最佳 Agent 实现是简单可组合的模式：触发、上下文、工具、决策规则、人工检查点五要素，框架越轻越好。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0846a47b0c034852" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div></div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">9</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_8016a484ec259352" target="_blank" rel="noopener noreferrer">AI Agent 落地真相：71% 在试用，不到 10% 跑通</a></div>
-            <div class="card-meta"><span class="source-chip">Kore.ai、McKinsey</span></div>
-            <div class="summary">Kore.ai 调查显示 71% 企业在用 AI Agent，但 McKinsey 数据表明不到 10% 实现规模化部署。71% 和 <10% 之间隔着 60 个百分点。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_8016a484ec259352" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div></div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">10</div>
-          <div class="card-body">
-            <div class="card-title">2026 年必须掌握的 Agent 运行时安全策略</div>
-            <div class="card-meta"><span class="source-chip">CSDN · 安全</span></div>
-            <div class="summary">Agent 动态工具选择引入"越狱"风险，权限感知检索、受控写入与人工介入成为 Agent 安全防护三大关键。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：CSDN · 2026-07-02</span></div>
-          </div>
-        </div></div>
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">6</div>
+        <div class="card-body">
+          <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_7446a44623e00452" target="_blank" rel="noopener noreferrer">Claude Sonnet 5发布：Agent能力逼近Opus，价格直降60%</a></div>
+          <div class="card-meta"><span class="source-chip">钛媒体</span></div>
+          <div class="summary">Anthropic发布最强中端模型Sonnet 5，智能体能力逼近Opus 4.8，API价格较Opus低约60%，降低企业AI Agent部署门槛。</div>
+          <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_7446a44623e00452" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+        </div>
+      </div>
     </div>
-  </section>
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">7</div>
+        <div class="card-body">
+          <div class="card-title">智谱AI推出ZCode代码大模型，低成本对标Claude Code与OpenAI Codex</div>
+          <div class="card-meta"><span class="source-chip">Atyun</span></div>
+          <div class="summary">智谱AI发布基于GLM-5.2的代码大模型ZCode，可视化管理多Agent开发环境，以极低成本对标海外代码AI工具。</div>
+          <div class="card-actions"><a href="http://www.atyun.com/" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">8</div>
+        <div class="card-body">
+          <div class="card-title">Anthropic与三星洽谈2nm定制AI芯片，挖角OpenAI核心工程师</div>
+          <div class="card-meta"><span class="source-chip">The Information</span></div>
+          <div class="summary">Anthropic启动自研AI芯片计划，与三星洽谈2nm代工并挖角OpenAI芯片核心工程师Clive Chan，大模型厂商自研芯片潮持续升温。</div>
+          <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：The Information · 36氪</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="section anchor theme-3" id="t3">
-    <div class="section-header" style="--theme:var(--purple)">
-      <span class="icon">📐</span>
-      <div class="section-title-block">
-        <h2>AI 评估标准升级</h2>
-        <p class="section-subtitle">模型能力见顶的信号：规范、基准、安全边界</p>
+<!-- ===== 主线3: AI+产业落地加速 ===== -->
+<section class="section anchor theme-3" id="t3">
+  <div class="section-header" style="--theme:var(--pink)">
+    <span class="icon">🏭</span>
+    <div class="section-title-block">
+      <h2>AI+产业落地加速</h2>
+      <p class="section-subtitle">人形机器人IPO · AI发现超导体 · 智能体新规落地</p>
+    </div>
+    <span class="count-badge">4 条</span>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">9</div>
+        <div class="card-body">
+          <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_7846a46348e80652" target="_blank" rel="noopener noreferrer">宇树科技科创板IPO注册生效，A股"人形机器人第一股"诞生</a></div>
+          <div class="card-meta"><span class="source-chip">证券时报</span></div>
+          <div class="summary">宇树科技仅73天完成科创板IPO注册，拟募资42亿元，成为A股人形机器人第一股，2025年营收16.99亿，毛利率60%。</div>
+          <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_7846a46348e80652" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+        </div>
       </div>
-      <span class="count-badge">4 条</span>
     </div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">11</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_3566a48ab3d82752" target="_blank" rel="noopener noreferrer">Open AI Infra 社区发布五项 AI 基础设施技术规范</a></div>
-            <div class="card-meta"><span class="source-chip">GCC-Open AI Infra</span></div>
-            <div class="summary">集中发布液冷整机柜、AIDC 基础设施等五项规范，完善 AI 算力基础设施标准体系，启动 OPEN NPO 项目。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_3566a48ab3d82752" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div></div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">12</div>
-          <div class="card-body">
-            <div class="card-title">Claude Opus "人类终极测试"正确率首超 50%</div>
-            <div class="card-meta"><span class="source-chip">Anthropic</span></div>
-            <div class="summary">Anthropic 旗舰模型 Claude Opus 4.6/4.7 在人类终极测试正确率超 50%，多项基准领先标志模型能力新高度。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：CSDN 综合 · 2026-06</span></div>
-          </div>
-        </div></div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">13</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0916a4a068e04252" target="_blank" rel="noopener noreferrer">五部委联合出手，AI 拟人化新规 7 月 15 日强制落地</a></div>
-            <div class="card-meta"><span class="source-chip">央广网</span></div>
-            <div class="summary">《人工智能拟人化互动服务管理暂行办法》要求 UGC 智能体逐个备案、全程审核、平台背全锅，未成年人限用拟人互动。</div>
-            <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0916a4a068e04252" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
-          </div>
-        </div></div>
-      <div class="card">
-        <div class="card-top">
-          <div class="idx">14</div>
-          <div class="card-body">
-            <div class="card-title">ChatGPT 全球市场份额首度跌破 50%，格局重塑</div>
-            <div class="card-meta"><span class="source-chip">感应塔报告</span></div>
-            <div class="summary">据感应塔《2026 年 AI 行业报告》，ChatGPT 全球 AI 助手份额跌破 50%，微软 MAI、GPT-5.6、MiniMax M3 密集发布分流。</div>
-            <div class="card-actions"><span style="font-size:0.7rem;color:var(--text2);opacity:0.6">来源：新华社 / 感应塔 · 2026-06-16</span></div>
-          </div>
-        </div></div>
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">10</div>
+        <div class="card-body">
+          <div class="card-title">阿里达摩院AI智能体28 GPU小时发现4种全新超导体</div>
+          <div class="card-meta"><span class="source-chip">CSDN</span></div>
+          <div class="summary">达摩院ElementsClaw AI智能体仅用28 GPU小时便发现4种全新超导体材料，开创AI驱动科学发现新范式。</div>
+          <div class="card-actions"><a href="https://blog.csdn.net/agito_cheung/article/details/162587564" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+        </div>
+      </div>
     </div>
-  </section>
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">11</div>
+        <div class="card-body">
+          <div class="card-title">五部委联合出手：AI拟人化新规7月15日强制落地</div>
+          <div class="card-meta"><span class="source-chip">央广网</span></div>
+          <div class="summary">《人工智能拟人化互动服务管理暂行办法》要求UGC智能体逐个备案、平台负全责、未成年人限用，AI拟人化进入强监管时代。</div>
+          <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0916a4a068e04252" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-top">
+        <div class="idx">12</div>
+        <div class="card-body">
+          <div class="card-title">腾讯企业微信推AI智能体"大员"，接入DeepSeek大模型</div>
+          <div class="card-meta"><span class="source-chip">企鹅号</span></div>
+          <div class="summary">腾讯在企业微信推出AI智能体"大员"，基于DeepSeek大模型构建，左滑即可唤起，能智能识别当前页面自动响应用户请求。</div>
+          <div class="card-actions"><a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_5816a4a59d201452" target="_blank" rel="noopener noreferrer">阅读原文</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section class="section anchor theme-4" id="t4">
-    <div class="section-header" style="--theme:var(--cyan)">
-      <span class="icon">🧪</span>
-      <div class="section-title-block">
-        <h2>研究前沿</h2>
+<!-- ===== 主线4: 研究前沿 ===== -->
+<section class="section anchor theme-4" id="t4">
+  <div class="section-header" style="--theme:var(--purple)">
+    <span class="icon">🧪</span>
+    <div class="section-title-block">
+      <h2>研究前沿</h2>
+    </div>
+    <span class="count-badge">2 条</span>
+  </div>
+  <div class="card-grid">
+    <div class="card card-research">
+      <div class="card-top">
+        <div class="idx">13</div>
+        <div class="card-body">
+          <div class="card-title"><a href="https://arxiv.org/pdf/2510.24701" target="_blank" rel="noopener noreferrer">Tongyi DeepResearch：开源agentic LLM，7大搜索基准SOTA</a></div>
+          <div class="card-meta"><span class="source-chip">arXiv 2510.24701</span><span class="source-chip">Alibaba-NLP</span></div>
+          <div class="research-meta"><span class="rm-tag">论文</span><span class="rm-tag">开源</span><span class="rm-tag">SOTA</span></div>
+          <div class="summary"><strong>核心：</strong>30.5B总参/3.3B激活的agentic搜索模型，专为长程深度信息检索设计。</div>
+          <div class="summary"><strong>方法：</strong>自动化数据合成+agentic持续预训练+端到端RL（GRPO+token级策略梯度+LOO advantage+负样本过滤）+双推理范式（ReAct/IterResearch Heavy）。</div>
+          <div class="summary"><strong>结果：</strong>Humanity's Last Exam / BrowseComp / BrowseComp-ZH / WebWalkerQA / xbench-DeepSearch / FRAMES / SimpleQA共7项SOTA。</div>
+          <div class="summary"><strong>复现：</strong>✅ 权重开源（HF+ModelScope），含inference/evaluation/WebAgent完整代码。</div>
+          <div class="card-actions"><a href="https://github.com/Alibaba-NLP/DeepResearch" target="_blank" rel="noopener noreferrer">代码仓库</a> · <a href="https://arxiv.org/pdf/2510.24701" target="_blank" rel="noopener noreferrer">论文PDF</a> · <a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener noreferrer">模型权重</a></div>
+        </div>
       </div>
-      <span class="count-badge">2 条</span>
     </div>
-    <div class="card-grid">
-      <div class="card card-research">
-        <div class="card-top">
-          <div class="idx">15</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://arxiv.org/pdf/2510.24701" target="_blank" rel="noopener noreferrer">Tongyi DeepResearch：开源 agentic LLM，7 大搜索基准 SOTA</a></div>
-            <div class="card-meta"><span class="source-chip">arXiv 2510.24701</span><span class="source-chip">Alibaba-NLP</span></div>
-            <div class="research-meta"><span class="rm-tag">论文</span><span class="rm-tag">开源</span><span class="rm-tag">SOTA</span></div>
-            <div class="summary"><strong>核心：</strong>30.5B 总参 / 3.3B 激活 的 agentic 搜索模型，专为长程深度信息检索设计。</div>
-            <div class="summary"><strong>方法：</strong>自动化数据合成 + agentic 持续预训练 + 端到端 RL（GRPO + token 级策略梯度 + LOO advantage + 负样本过滤）+ 双推理范式（ReAct / IterResearch Heavy）。</div>
-            <div class="summary"><strong>结果：</strong>Humanity's Last Exam / BrowseComp / BrowseComp-ZH / WebWalkerQA / xbench-DeepSearch / FRAMES / SimpleQA 共 7 项 SOTA。</div>
-            <div class="summary"><strong>复现：</strong>✅ 权重开源（HF + ModelScope），含 inference / evaluation / WebAgent 完整代码。</div>
-            <div class="card-actions"><a href="https://github.com/Alibaba-NLP/DeepResearch" target="_blank" rel="noopener noreferrer">代码仓库</a> · <a href="https://arxiv.org/pdf/2510.24701" target="_blank" rel="noopener noreferrer">论文 PDF</a> · <a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener noreferrer">模型权重</a></div>
-          </div>
-        </div></div>
-      <div class="card card-research">
-        <div class="card-top">
-          <div class="idx">16</div>
-          <div class="card-body">
-            <div class="card-title"><a href="https://arxiv.org/abs/2510.08502" target="_blank" rel="noopener noreferrer">Agent-SafetyBench：16 款主流 Agent 安全评测全军覆没，最高分不到 60%</a></div>
-            <div class="card-meta"><span class="source-chip">arXiv 2510.08502</span><span class="source-chip">清华大学</span></div>
-            <div class="research-meta"><span class="rm-tag">论文</span><span class="rm-tag">开源</span><span class="rm-tag">安全评测</span></div>
-            <div class="summary"><strong>核心：</strong>首个系统性 LLM Agent 安全基准，349 个交互环境 + 2000 个测试案例，覆盖 8 类安全风险和 10 种典型失效模式。</div>
-            <div class="summary"><strong>发现：</strong>16 款主流模型（含 GPT-4o、Claude、Gemini）安全得分均低于 60%，最薄弱环节为「调用危险工具」(M7)，平均仅 32.7%。</div>
-            <div class="summary"><strong>关键洞察：</strong>Agent 从「知识提供者」转为「行动执行者」后，传统内容安全评测已不够用；参数伪造（75% 模型编造 API 参数）和约束无视（40% 超额下单）是两大高频失效模式。</div>
-            <div class="summary"><strong>复现：</strong>✅ 代码与数据开源（GitHub thu-coai/Agent-SafetyBench），含完整评测脚本。</div>
-            <div class="card-actions"><a href="https://github.com/thu-coai/Agent-SafetyBench" target="_blank" rel="noopener noreferrer">代码仓库</a> · <a href="https://arxiv.org/abs/2510.08502" target="_blank" rel="noopener noreferrer">论文 PDF</a></div>
-          </div>
-        </div></div>
+    <div class="card card-research">
+      <div class="card-top">
+        <div class="idx">14</div>
+        <div class="card-body">
+          <div class="card-title"><a href="https://arxiv.org/abs/2510.08502" target="_blank" rel="noopener noreferrer">Agent-SafetyBench：16款主流Agent安全评测全军覆没，最高分不到60%</a></div>
+          <div class="card-meta"><span class="source-chip">arXiv 2510.08502</span><span class="source-chip">清华大学</span></div>
+          <div class="research-meta"><span class="rm-tag">论文</span><span class="rm-tag">开源</span><span class="rm-tag">安全评测</span></div>
+          <div class="summary"><strong>核心：</strong>首个系统性LLM Agent安全基准，349个交互环境+2000个测试案例，覆盖8类安全风险和10种典型失效模式。</div>
+          <div class="summary"><strong>发现：</strong>16款主流模型（含GPT-4o、Claude、Gemini）安全得分均低于60%，最薄弱环节为「调用危险工具」(M7)，平均仅32.7%。</div>
+          <div class="summary"><strong>关键洞察：</strong>Agent从"知识提供者"转为"行动执行者"，传统内容安全评测已不够用；参数伪造(75%模型编造API参数)和约束无视(40%超额下单)是两大高频失效模式。</div>
+          <div class="summary"><strong>复现：</strong>✅ 代码与数据开源(GitHub thu-coai/Agent-SafetyBench)，含完整评测脚本。</div>
+          <div class="card-actions"><a href="https://github.com/thu-coai/Agent-SafetyBench" target="_blank" rel="noopener noreferrer">代码仓库</a> · <a href="https://arxiv.org/abs/2510.08502" target="_blank" rel="noopener noreferrer">论文PDF</a></div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+</main>
 
 <footer class="footer">
-  <p class="footer-tagline">📌 编辑签名：今天三件事——造卡、动手、画线。<strong>没有泡沫，也没有革命，是基础设施在补完。</strong></p>
+  <p class="footer-tagline">📌 编辑签名：国产算力从&ldquo;能不能用&rdquo;走到了&ldquo;能不能训出万亿参数&rdquo;的回答。当算力追上、监管落地、模型分层，AI的规模化才刚刚开始。</p>
   <div class="sources-row">
-    <span class="src">The Information</span>·<span class="src">36氪</span>·<span class="src">CSDN</span>·<span class="src">Anthropic</span>·<span class="src">GCC-Open AI Infra</span>
+    <span class="src">The Information</span>·<span class="src">财联社</span>·<span class="src">证券时报</span>·<span class="src">钛媒体</span>·<span class="src">北京商报</span>·<span class="src">观点网</span>·<span class="src">央广网</span>·<span class="src">CSDN</span>·<span class="src">Atyun</span>·<span class="src">企鹅号</span>·<span class="src">arXiv</span>·<span class="src">GitHub</span>·<span class="src">发改委</span>·<span class="src">Anthropic</span>·<span class="src">OpenAI</span>·<span class="src">高盛</span>
   </div>
-  <p class="footer-meta">第 42 期 · 2026.07.06 · 星期一 · 共 16 条 · <a href="https://ai-daily-9yz.pages.dev/">ai-daily.pages.dev</a></p>
+  <p class="footer-meta">第 70 期 · 2026.07.08 · 星期三 · 共 14 条 · E2E评分 78 · <a href="https://ai-daily-9yz.pages.dev/">ai-daily-9yz.pages.dev</a></p>
 </footer>
 
 <script>
 (function() {
-  // Smooth scroll for anchor links
   document.querySelectorAll('.nav-inner a').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
@@ -615,4 +603,3 @@
 </script>
 </body>
 </html>
-
